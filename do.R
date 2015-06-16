@@ -99,3 +99,44 @@ do <- function(to.plot,do.area,do.ratio,type,my.concentrations=NULL, my.inhibito
     }
   }
 }
+
+statistics <- function(my.x,this.y,identifier,out.dir) {
+  to.test = combn(unique(as.character(my.x)),2)
+  out = c()
+  for (i in 1:(length(to.test)/2)){
+    g1 = to.test[,i][1]
+    g2 = to.test[,i][2]
+    a1 = this.y[which(my.x==g1)]
+    a1g = a1[!is.nan(a1) & !is.na(a1)]
+    a2 = this.y[which(my.x==g2)]
+    a2g = a2[!is.nan(a2) & !is.na(a2)]
+    if (length(a1g)>1 & length(a2g)>1){
+        my.p.wilcox = signif(wilcox.test(x=a1g,y=a2g,exact=F)$p.value,2)
+        my.p.t = signif(t.test(x=a1g,y=a2g)$p.value,2)
+        a1.mean = round(mean(a1g),2)
+        a2.mean = round(mean(a2g),2)
+        a1.median = round(median(a1g),2)
+        a2.median = round(median(a2g),2)
+    }
+    if (length(a1g)<2 | length(a2g)<2){
+        my.p = NA
+        a1.mean = NA
+        a2.mean = NA
+        a1.median = NA
+        a2.median = NA
+    }
+    now = cbind(g1,g2,a1.mean,a2.mean,a1.median,a2.median,my.p.t,my.p.wilcox)
+    out = rbind(out,now)
+  }
+  out=as.data.frame(out)
+  out2 = out[order(as.numeric(as.character(out[,5]))),]
+  out3 = out2
+  #out3 = out2[which(as.numeric(as.character(out2[,5]))<0.05),]
+  names(out3) = c("group_1","group_2","mean_1","mean_2","median_1","median_2","p.t","p.wilcox")
+  if (length(which(!is.na(out3$p.wilcox)))>0){
+    write.csv(out3,file=out.dir,quote=F,row.names=F)
+  }
+  write(identifier,file=out.dir,append=T)
+}
+
+
