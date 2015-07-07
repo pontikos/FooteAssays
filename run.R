@@ -1,11 +1,5 @@
-source('S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/compiled_inhibitors/do.R')
-
-#samples <- read.table("S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/compiled_inhibitors/Chambers_v5.txt",header=T)
-samples <- read.csv("S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/compiled_inhibitors/Chambers_v5.csv")[,1:9]
-
-output <- "S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/compiled_inhibitors/results/"
-
-
+source('do.R')
+s
 #Vary here
 
 #20/03/13
@@ -1605,3 +1599,68 @@ my.date = "09/06/2015"
 additional = "pH"
 separator="_"
 do(1,do.area=0,do.ratio=1,type="normal",my.concentrations=c('0nM','5uM','10uM','20uM','200uM'), my.inhibitors=c('controldmso','CFTR-172','Phloretin','controlEtOH','DPCIB','DIOA'))
+
+
+#10/06/2015
+setwd("S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/100615/Juliet pH")
+key.loc = NA
+my.date = "10/06/2015"
+additional = "pH"
+separator="_"
+do(1,do.area=0,do.ratio=1,type="normal")
+
+#09/06/2015
+setwd("S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/090615/Juliet area")
+key.loc = NA
+my.date = "09/06/2015"
+additional = "_area"
+separator="_"
+do(1,do.area=1,do.ratio=0,type="normal")
+
+#20/08/13
+setwd("S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/200813/WT areas")
+key.loc = NA
+my.date = "20/08/2013"
+additional = "_WTarea"
+separator="-"
+do(1,do.area=1,do.ratio=0,type="normal")
+
+#02/06/2015
+setwd("S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/020615/Juliet pH")
+key.loc = NA
+my.date = "02/06/2015"
+additional = "pH"
+separator="_"
+do(1,do.area=0,do.ratio=1,type="normal")
+
+#19/06/2015
+setwd("S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/190615/Juliet pH")
+key.loc = NA
+my.date = "19/06/2015"
+additional = "pH"
+separator="_"
+do(1,do.area=0,do.ratio=1,type="normal")
+
+#19/06/2015
+setwd("S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/190615/Juliet area")
+key.loc = NA
+my.date = "19/06/2015"
+additional = "area"
+separator="_"
+do(1,do.area=1,do.ratio=0,type="normal")
+
+#23/06/2015
+setwd("S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/230615/Juliet pH")
+key.loc = NA
+my.date = "23/06/2015"
+additional = "pH"
+separator="_"
+do(1,do.area=0,do.ratio=1,type="normal")
+
+#23/06/2015
+setwd("S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/230615/Juliet area")
+key.loc = NA
+my.date = "23/06/2015"
+additional = "_area"
+separator="_"
+do(1,do.area=1,do.ratio=0,type="normal")
