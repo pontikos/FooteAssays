@@ -29,7 +29,7 @@ do <- function(to.plot, do.area, do.ratio, type, my.concentrations=NULL, my.inhi
       converted <- without.lsm
     }
     well <- strsplit(converted,separator)[[1]][1]
-    converted.2 <- strsplit(converted,separator)[[1]][2]
+    runs <- strsplit(converted,separator)[[1]][2]
     print(details <- samples[which(samples$Date==my.date & samples$Well==well),])
     for (j in unique(d$Identifier)){
       d.r <- d$Ratio[which(d$Identifier==j)]
@@ -44,7 +44,7 @@ do <- function(to.plot, do.area, do.ratio, type, my.concentrations=NULL, my.inhi
         d.a.g = d.a[which(!is.na(d.a) & d.a!=0)]
         Area = sum(d.a.g)/length(which(d.a.g>0))
       }
-      this <- cbind(details,Ratio,Area,well,converted.2,type)
+      this <- cbind(details,Ratio,Area,well,runs,type)
       store <- rbind(store,this)
     }
   }
