@@ -1,6 +1,23 @@
 source('do.R')
-s
+ 
+#samples <- read.csv("S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/compiled_inhibitors/Chambers_v5.csv")[,1:9]
+#samples <- read.table("Chambers_v5_CopyPaste.txt",sep='\t',header=TRUE)[,1:9]
+samples <- read.csv("Chambers_v5.csv")
+
+# test
+key.loc <- NA
+my.date <- "20/03/2013"
+additional <- ""
+separator="_"
+to.plot=TRUE
+do.area=TRUE
+do.ratio=TRUE
+type='normal'
+output <- "results/"
+do(to.plot=to.plot,do.area=do.area,do.ratio=do.ratio,type=type)
+
 #Vary here
+output <- "S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/compiled_inhibitors/results/"
 
 #20/03/13
 #Both
@@ -19,6 +36,7 @@ my.date = "22/03/2013"
 additional = "_round1_area"
 separator="_"
 do(1,do.area=1,do.ratio=0,type="normal")
+
 #pH
 setwd("S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/220313/round1/pH")
 key.loc = NA
