@@ -1,10 +1,15 @@
+#samples <- read.table("S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/compiled_inhibitors/Chambers_v5.txt",header=T)
+samples <- read.csv("S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/compiled_inhibitors/Chambers_v5.csv")[,1:9]
+output <- "S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/compiled_inhibitors/results/"
+
+
 do <- function(to.plot,do.area,do.ratio,type,my.concentrations=NULL, my.inhibitors=NULL){
   my.date2.temp = strsplit(my.date,"/")[[1]]
   my.date2 = paste(my.date2.temp[1],my.date2.temp[2],my.date2.temp[3],sep="_")
   files=list.files()
   results_files <- files[grep("results.txt",files)]
   temp <- sapply(X=results_files,function(X){strsplit(X,"_results")[[1]][1]})
-  filenames <- names(temp)
+  print(filenames <- names(temp))
   experiment <- as.character(temp)
   to.convert <- 0
   if (!is.na(key.loc)){
@@ -35,6 +40,7 @@ do <- function(to.plot,do.area,do.ratio,type,my.concentrations=NULL, my.inhibito
         d.a.g = d.a[which(!is.na(d.a) & d.a!=0)]
         Area = sum(d.a.g)/length(which(d.a.g>0))
       }
+      browser()
       this = cbind(details,Ratio,Area,converted.1,converted.2,type)
       store = rbind(store,this)
     }
