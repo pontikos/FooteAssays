@@ -6,10 +6,10 @@ samples <- read.csv("Chambers_v5.csv")
 # type
 # my.concentrations
 # my.inhibitors
-do <- function(to.plot, do.area, do.ratio, type, my.concentrations=NULL, my.inhibitors=NULL){
+do <- function(base.dir, to.plot, do.area, do.ratio, type, my.concentrations=NULL, my.inhibitors=NULL){
   my.date2.temp <-strsplit(my.date,"/")[[1]]
   my.date2 <-paste(my.date2.temp[1],my.date2.temp[2],my.date2.temp[3],sep="_")
-  results_files <- list.files(pattern='.*results.txt')
+  results_files <- list.files(path=base.dir, pattern='.*results.txt')
   file.prefix <- sapply(X=results_files,function(X){strsplit(X,"_results")[[1]][1]})
   print(filenames <- names(file.prefix))
   print(experiment <- as.character(file.prefix))
@@ -51,7 +51,7 @@ do <- function(to.plot, do.area, do.ratio, type, my.concentrations=NULL, my.inhi
     }
   }
   for (k in unique(store$Plate)){
-    out <- paste(output,k,"_","store_",my.date2,additional,".txt",sep="")
+    out <- file.path(base.dir,paste(output,k,"_","store_",my.date2,additional,".txt",sep="")))
     write.table(store[which(store$Plate==k),], file=out, quote=F,row.names=F,col.names=T)
   }
   for.title <- paste(unique(as.character(store$Date)),additional,sep="\n")
@@ -63,7 +63,7 @@ do <- function(to.plot, do.area, do.ratio, type, my.concentrations=NULL, my.inhi
   my.x <- paste(store$Type,store$Inhibitor,store$Concentration,store$Buffer)
   if (to.plot){
     for (k in unique(store$Plate)){
-      pdf(paste(output,k,"_",my.date2,additional,".pdf",sep=""),width=10)
+      pdf(file.path(base.dir,paste(output,k,"_",my.date2,additional,".pdf",sep="")),width=10)
       par(mar=c(10, 4, 4, 2) + 0.1)      
       this.plate <- store[which(store$Plate==k),]
       #if (is.null(my.concentrations)) {
@@ -88,7 +88,7 @@ do <- function(to.plot, do.area, do.ratio, type, my.concentrations=NULL, my.inhi
       this.plate = store[which(store$Plate==k),]
       this.plate.x = as.factor(as.character(my.x[which(store$Plate==k)]))
       this.y <- this.plate$Area
-      out.dir = paste(output,k,"_","pvalues_area_",my.date2,additional,".csv",sep="")
+      out.dir = file.path(base.dir, paste(output,k,"_","pvalues_area_",my.date2,additional,".csv",sep=""))
       identifier = cbind(paste("file:","area_",my.date2,additional,"_",k,sep=""),"","","","")
       statistics(this.plate.x,this.y,identifier,out.dir)
     }
@@ -99,7 +99,7 @@ do <- function(to.plot, do.area, do.ratio, type, my.concentrations=NULL, my.inhi
       this.plate = store[which(store$Plate==k),]
       this.plax = as.factor(as.character(my.x[which(store$Plate==k)]))
       this.y <- this.plate$Ratio
-      out.dir = paste(output,k,"_","pvalues_ratio_",my.date2,additional,".csv",sep="")
+      out.dir = file.path(base.dir,paste(output,k,"_","pvalues_ratio_",my.date2,additional,".csv",sep=""))
       identifier = cbind(paste("file:","ratio_",my.date2,additional,"_",k,sep=""),"","","","")
       statistics(this.plate.x,this.y,identifier,out.dir)
     }

@@ -23,3 +23,13 @@ source('do.R')
 Be careful of ```setwd``` command as it changes the working directory.
 TODO change code so that path is modified in ```do.R```.
 
+To update changes to FooteAssays
+
+RStudio - Git - Update icon - Shell
+
+A black dialogue box pops up. Type in git pull and enter username: juliet.foote.14@ucl.ac.uk password: Tinkerbell16
+Then:
+git commit -m `update to code` do.R or `Chambers_v5.csv` Chambers_v5.csv or whatever
+Then:
+git push
+
