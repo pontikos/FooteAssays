@@ -8,3 +8,18 @@ LSM file = file containing images of cells taken with the confocal microscope. C
 Results.txt file = contains an identifier to differentiate between cells, the ratio or area measurement, and C1 and C2 - the two measurements which give the final pH ratio
 
 The script uses Chambers to find the well condition which relates to the number results file which is the well number
+
+# Running
+
+Make sure samples Chambers_v5 has been read into program with:
+```R
+samples <- read.csv("Chambers_v5.csv")
+```
+Then:
+```R
+source('do.R')
+```
+
+Be careful of ```setwd``` command as it changes the working directory.
+TODO change code so that path is modified in ```do.R```.
+
