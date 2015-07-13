@@ -2,7 +2,7 @@ source('do.R')
  
 #samples <- read.csv("S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/compiled_inhibitors/Chambers_v5.csv")[,1:9]
 #samples <- read.table("Chambers_v5_CopyPaste.txt",sep='\t',header=TRUE)[,1:9]
-samples <- read.csv("Chambers_v5.csv")
+
 
 # test
 key.loc <- NA
@@ -1673,7 +1673,7 @@ key.loc = NA
 my.date = "23/06/2015"
 additional = "pH"
 separator="_"
-do(1,do.area=0,do.ratio=1,type="normal")
+do(TRUE,do.area=FALSE,do.ratio=TRUE,type="normal")
 
 #23/06/2015
 setwd("S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/230615/Juliet area")
@@ -1682,3 +1682,19 @@ my.date = "23/06/2015"
 additional = "_area"
 separator="_"
 do(1,do.area=1,do.ratio=0,type="normal")
+
+#10/07/2015
+setwd("S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/100715/Juliet pH")
+key.loc = NA
+my.date = "10/07/2015"
+additional = "_pH"
+separator="_"
+do(TRUE,do.area=FALSE,do.ratio=TRUE,type="normal")
+
+#10/07/2015
+setwd("S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/100715/Juliet area")
+key.loc = NA
+my.date = "10/07/2015"
+additional = "_area"
+separator="_"
+do(TRUE,do.area=TRUE,do.ratio=FALSE,type="normal")
