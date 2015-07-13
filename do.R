@@ -1,3 +1,4 @@
+samples <- read.csv("Chambers_v5.csv")
 
 # to.plot
 # do.area
@@ -44,6 +45,7 @@ do <- function(to.plot, do.area, do.ratio, type, my.concentrations=NULL, my.inhi
         d.a.g = d.a[which(!is.na(d.a) & d.a!=0)]
         Area = sum(d.a.g)/length(which(d.a.g>0))
       }
+      #browser()
       this <- cbind(details,Ratio,Area,well,runs,type)
       store <- rbind(store,this)
     }
