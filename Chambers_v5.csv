@@ -1034,3 +1034,7 @@ Date,Plate,Well,Type,Inhibitor,Concentration,Cell,Buffer,Inside
 29/06/2015,144,6,HV1,DIDS,10uM,BM,Bicarbonate,Candida
 29/06/2015,144,7,HV1,control,0nM,BM,Duchen+CO3,Candida
 29/06/2015,144,8,HV1,control,0nM,BM,Duchen_free_CO2,Candida
+10/07/2015,145,1,HV1,control,0nM,BM,Bicarbonate,Candida
+10/07/2015,145,2,HV1_CLCN3,control,0nM,BM,Bicarbonate,Candida
+10/07/2015,145,3,HV1,control,0nM,BM,Duchen,Candida
+10/07/2015,145,4,HV1_CLCN3,control,0nM,BM,Duchen,Candida
