@@ -1046,3 +1046,15 @@ Date,Plate,Well,Type,Inhibitor,Concentration,Cell,Buffer,Inside
 15/07/2015,146,6,HV1,NPPB,100uM,BM,Duchen,Candida
 15/07/2015,146,7,WT,DCPIB,20uM,BM,Duchen,Candida
 15/07/2015,146,8,WT,NPPB,100uM,BM,Duchen,Candida
+20/07/2015,147,1,WT,control,0nM,BM,Duchen,Candida
+20/07/2015,147,2,CLCN3,control,0nM,BM,Duchen,Candida
+20/07/2015,147,3,WT,zinc,100uM,BM,Duchen,Candida
+20/07/2015,147,4,CLCN3,zinc,100uM,BM,Duchen,Candida
+20/07/2015,147,5,WT,control,0nM,BM,HBSS,Candida
+20/07/2015,147,6,CLCN3,control,0nM,BM,HBSS,Candida
+20/07/2015,147,7,WT,zinc,300uM,BM,HBSS,Candida
+20/07/2015,147,8,CLCN3,zinc,300uM,BM,HBSS,Candida
+20/07/2015,147,9,HV1,control,0nM,BM,Duchen,Candida
+20/07/2015,147,10,HV1,control,0nM,BM,HBSS,Candida
+20/07/2015,147,11,HV1_CLCN3,control,0nM,BM,Duchen,Candida
+20/07/2015,147,12,HV1_CLCN3,control,0nM,BM,HBSS,Candida
