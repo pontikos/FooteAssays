@@ -103,7 +103,7 @@ do <- function(base.dir, to.plot, do.area, do.ratio, type, my.concentrations=NUL
       this.plate = store[which(store$Plate==k),]
       this.plax = as.factor(as.character(my.x[which(store$Plate==k)]))
       this.y <- this.plate$Ratio
-      out.dir = file.path(base.dir,paste(output,k,"_","pvalues_ratio_",my.date2,additional,".csv",sep=""))
+      out.dir <- paste(output,k,"_","pvalues_ratio_",my.date2,additional,".csv",sep="")
       identifier = cbind(paste("file:","ratio_",my.date2,additional,"_",k,sep=""),"","","","")
       statistics(this.plate.x,this.y,identifier,out.dir)
     }
