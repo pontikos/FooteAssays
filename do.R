@@ -1,3 +1,5 @@
+#Vary here
+output <- "S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/compiled_inhibitors/results/"
 samples <- read.csv("Chambers_v5.csv")
 
 # to.plot
@@ -9,7 +11,7 @@ samples <- read.csv("Chambers_v5.csv")
 do <- function(base.dir, to.plot, do.area, do.ratio, type, my.concentrations=NULL, my.inhibitors=NULL){
   my.date2.temp <-strsplit(my.date,"/")[[1]]
   my.date2 <-paste(my.date2.temp[1],my.date2.temp[2],my.date2.temp[3],sep="_")
-  results_files <- list.files(path=base.dir, pattern='.*results.txt')
+  results_files <- list.files(path=base.dir, pattern='.*results.txt',full.names = TRUE)
   file.prefix <- sapply(X=results_files,function(X){strsplit(X,"_results")[[1]][1]})
   print(filenames <- names(file.prefix))
   print(experiment <- as.character(file.prefix))
@@ -21,7 +23,8 @@ do <- function(base.dir, to.plot, do.area, do.ratio, type, my.concentrations=NUL
   #make store
   store <-c()
   for (i in 1:length(experiment)){
-    d <- read.csv(filenames[i],header=T,sep="\t")
+    cat('Reading',filenames[i],'...\n')
+    print(dim(d <- read.csv(filenames[i],header=T,sep="\t")))
     without.lsm <- strsplit(experiment[i],".lsm")[[1]][1]
     if (to.convert) {
       conversion <- read.csv(key.loc,header=F,sep="\t")
@@ -29,9 +32,10 @@ do <- function(base.dir, to.plot, do.area, do.ratio, type, my.concentrations=NUL
     } else {
       converted <- without.lsm
     }
-    well <- strsplit(converted,separator)[[1]][1]
-    runs <- strsplit(converted,separator)[[1]][2]
-    print(details <- samples[which(samples$Date==my.date & samples$Well==well),])
+    well <- strsplit(basename(converted),separator)[[1]][1]
+    runs <- strsplit(basename(converted),separator)[[1]][2]
+    cat('Date',my.date,'well',well,'...\n')
+    print(dim(details <- samples[which(samples$Date==my.date & samples$Well==well),]))
     for (j in unique(d$Identifier)){
       d.r <- d$Ratio[which(d$Identifier==j)]
       Ratio <- NA
@@ -45,16 +49,16 @@ do <- function(base.dir, to.plot, do.area, do.ratio, type, my.concentrations=NUL
         d.a.g = d.a[which(!is.na(d.a) & d.a!=0)]
         Area = sum(d.a.g)/length(which(d.a.g>0))
       }
-      #browser()
       this <- cbind(details,Ratio,Area,well,runs,type)
       store <- rbind(store,this)
     }
   }
   for (k in unique(store$Plate)){
-    out <- file.path(base.dir,paste(output,k,"_","store_",my.date2,additional,".txt",sep="")))
+    out <- paste(output,k,"_","store_",my.date2,additional,".txt",sep="")
     write.table(store[which(store$Plate==k),], file=out, quote=F,row.names=F,col.names=T)
   }
-  for.title <- paste(unique(as.character(store$Date)),additional,sep="\n")
+  cat('for.title:\n')
+  print(for.title <- paste(unique(as.character(store$Date)),additional,sep="\n"))
   if (!is.null(my.concentrations))
     store$Concentration <- factor(store$Concentration, ordered=TRUE,levels=my.concentrations)
   if (!is.null(my.inhibitors))
@@ -63,7 +67,7 @@ do <- function(base.dir, to.plot, do.area, do.ratio, type, my.concentrations=NUL
   my.x <- paste(store$Type,store$Inhibitor,store$Concentration,store$Buffer)
   if (to.plot){
     for (k in unique(store$Plate)){
-      pdf(file.path(base.dir,paste(output,k,"_",my.date2,additional,".pdf",sep="")),width=10)
+      pdf(paste(output,k,"_",my.date2,additional,".pdf",sep=""),width=10)
       par(mar=c(10, 4, 4, 2) + 0.1)      
       this.plate <- store[which(store$Plate==k),]
       #if (is.null(my.concentrations)) {
@@ -88,7 +92,7 @@ do <- function(base.dir, to.plot, do.area, do.ratio, type, my.concentrations=NUL
       this.plate = store[which(store$Plate==k),]
       this.plate.x = as.factor(as.character(my.x[which(store$Plate==k)]))
       this.y <- this.plate$Area
-      out.dir = file.path(base.dir, paste(output,k,"_","pvalues_area_",my.date2,additional,".csv",sep=""))
+      out.dir = paste(output,k,"_","pvalues_area_",my.date2,additional,".csv",sep="")
       identifier = cbind(paste("file:","area_",my.date2,additional,"_",k,sep=""),"","","","")
       statistics(this.plate.x,this.y,identifier,out.dir)
     }
