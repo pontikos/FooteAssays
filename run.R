@@ -16,8 +16,7 @@ type='normal'
 output <- "results/"
 do(to.plot=to.plot,do.area=do.area,do.ratio=do.ratio,type=type)
 
-#Vary here
-output <- "S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/compiled_inhibitors/results/"
+
 
 #20/03/13
 #Both
@@ -1685,7 +1684,7 @@ separator="_"
 do(base.dir, 1,do.area=1,do.ratio=0,type="normal")
 
 #10/07/2015
-setwd("S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/100715/Juliet pH")
+base.dir <-"S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/100715/Juliet pH"
 key.loc = NA
 my.date = "10/07/2015"
 additional = "_pH"
@@ -1693,10 +1692,25 @@ separator="_"
 do(base.dir, TRUE,do.area=FALSE,do.ratio=TRUE,type="normal")
 
 #10/07/2015
-setwd("S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/100715/Juliet area")
+base.dir <- "S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/100715/Juliet area"
 key.loc = NA
 my.date = "10/07/2015"
 additional = "_area"
 separator="_"
 do(base.dir, TRUE, do.area=TRUE,do.ratio=FALSE,type="normal")
 
+#22/01/2015
+base.dir <- "S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/220115/Juliet area"
+key.loc = NA
+my.date = "22/01/2015"
+additional = "_area"
+separator="_"
+do(base.dir, TRUE, do.area=TRUE,do.ratio=FALSE,type="normal")
+
+#20/07/2015
+base.dir <-"S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/200715/Compiled pH"
+key.loc = NA
+my.date = "20/07/2015"
+additional = "_compiled_pH"
+separator="_"
+do(base.dir, TRUE,do.area=FALSE,do.ratio=TRUE,type="normal")
