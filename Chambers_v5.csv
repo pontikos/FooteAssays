@@ -1059,8 +1059,8 @@ Date,Plate,Well,Type,Inhibitor,Concentration,Cell,Buffer,Inside
 20/07/2015,147,11,HV1_CLCN3,control,0nM,BM,Duchen,Candida
 20/07/2015,147,12,HV1_CLCN3,control,0nM,BM,HBSS,Candida
 21/07/2015,148,1,HV1_CLCN3,phagocytosing,0nM,BM,Duchen,Candida
-21/07/2015,148,2,HV1,nonphag,0nM,BM,Duchen,Candida
-21/07/2015,148,3,HV1_CLCN3,phagocytosing,0nM,BM,Duchen,Candida
+21/07/2015,148,2,HV1,phagocytosing,0nM,BM,Duchen,Candida
+21/07/2015,148,3,HV1_CLCN3,nonphag,0nM,BM,Duchen,Candida
 21/07/2015,148,4,HV1,nonphag,0nM,BM,Duchen,Candida
 ,,,,,,,,
 ,,,,,,,,
