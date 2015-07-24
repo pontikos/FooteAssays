@@ -1072,3 +1072,15 @@ Date,Plate,Well,Type,Inhibitor,Concentration,Cell,Buffer,Inside
 10/07/2015,150,2,HV1_CLCN3,phagocytosing,0nM,BM,Bicarbonate,Candida
 10/07/2015,150,3,HV1,nonphag,0nM,BM,Bicarbonate,Candida
 10/07/2015,150,4,HV1_CLCN3,nonphag,0nM,BM,Bicarbonate,Candida
+17/07/2015,151,1,WT,control,0nM,BM,Bicarbonate,Candida
+17/07/2015,151,2,WT,control,0nM,BM,Duchen,Candida
+17/07/2015,151,3,WT,zinc,300uM,BM,Phosphate_free_duchen,Candida
+17/07/2015,151,4,TSPO,control,0nM,BM,Bicarbonate,Candida
+17/07/2015,151,5,TSPO,control,0nM,BM,Duchen,Candida
+17/07/2015,151,6,TSPO,zinc,300uM,BM,Phosphate_free_duchen,Candida
+23/07/2015,152,1,WT,control,0nM,BM,Duchen,Candida
+23/07/2015,152,2,WT,control,0nM,BM,Bicarbonate,Candida
+23/07/2015,152,3,WT,zinc,300uM,BM,Phosphate_free_duchen,Candida
+23/07/2015,152,4,TSPO,control,0nM,BM,Duchen,Candida
+23/07/2015,152,5,TSPO,control,0nM,BM,Bicarbonate,Candida
+23/07/2015,152,6,TSPO,zinc,300uM,BM,Phosphate_free_duchen,Candida
