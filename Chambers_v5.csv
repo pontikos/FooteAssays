@@ -1084,3 +1084,11 @@ Date,Plate,Well,Type,Inhibitor,Concentration,Cell,Buffer,Inside
 23/07/2015,152,4,TSPO,control,0nM,BM,Duchen,Candida
 23/07/2015,152,5,TSPO,control,0nM,BM,Bicarbonate,Candida
 23/07/2015,152,6,TSPO,zinc,300uM,BM,Phosphate_free_duchen,Candida
+29/07/2015,153,1,CLCN7-/-,control,0nM,Blood,Bicarbonate,Candida
+29/07/2015,153,2,CLCN7-/-,control,0nM,Blood,Duchen1,Candida
+29/07/2015,153,3,CLCN7-/-,control,0nM,Blood,Duchen2,Candida
+29/07/2015,153,4,CLCN7-/-,zinc ,100uM,Blood,Phosphate_free_duchen,Candida
+29/07/2015,153,5,Human,control,0nM,Blood,Bicarbonate,Candida
+29/07/2015,153,6,Human,control,0nM,Blood,Duchen1,Candida
+29/07/2015,153,7,Human,control,0nM,Blood,Duchen2,Candida
+29/07/2015,153,8,Human,zinc ,100uM,Blood,Phosphate_free_duchen,Candida
