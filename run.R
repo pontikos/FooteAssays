@@ -1714,3 +1714,59 @@ my.date = "20/07/2015"
 additional = "_compiled_pH"
 separator="_"
 do(base.dir, TRUE,do.area=FALSE,do.ratio=TRUE,type="normal")
+
+#20/07/2015
+base.dir <-"S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/200715/Compiled area"
+key.loc = NA
+my.date = "20/07/2015"
+additional = "_compiled_area"
+separator="_"
+do(base.dir, TRUE,do.area=TRUE,do.ratio=FALSE,type="normal")
+
+#21/07/2015
+base.dir <- "S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/210715/Tony areas"
+key.loc = NA
+my.date = "21/07/2015"
+additional = "_area"
+separator="_"
+do(base.dir, TRUE, do.area=TRUE,do.ratio=FALSE,type="normal")
+
+#21/07/2015
+base.dir <- "S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/210715/Tony pHs"
+key.loc = NA
+my.date = "21/07/2015"
+additional = "_pH"
+separator="_"
+do(base.dir, TRUE, do.area=FALSE,do.ratio=TRUE,type="normal")
+
+#21/07/2015
+base.dir <-"S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/210715/Tony Phagocytosing cytosol"
+key.loc = NA
+my.date = "21/07/2015"
+additional = "_cytosolic_pH_HV1_CLCN3"
+separator="_"
+do(base.dir, TRUE,do.area=FALSE,do.ratio=TRUE,type="normal")
+
+#10/07/2015
+base.dir <-"S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/100715/Tony Phagocytosing"
+key.loc = NA
+my.date = "10/07/2015"
+additional = "_cytosolic_pH_HV1_CLCN3_bicarb"
+separator="_"
+do(base.dir, TRUE,do.area=FALSE,do.ratio=TRUE,type="normal")
+
+#17/07/2015
+base.dir <-"S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/170715/Juliet pH"
+key.loc = NA
+my.date = "17/07/2015"
+additional = "_TSPO_pH"
+separator="_"
+do(base.dir, TRUE,do.area=FALSE,do.ratio=TRUE,type="normal")
+
+#29/07/2015
+base.dir <-"S:/Medicine/MOLMED_Neutrophils/Duchen_Neutrophils/290715/Juliet pH"
+key.loc = NA
+my.date = "29/07/2015"
+additional = "_CLCN7patient_pH"
+separator="_"
+do(base.dir, TRUE,do.area=FALSE,do.ratio=TRUE,type="normal")
