@@ -1078,12 +1078,6 @@ Date,Plate,Well,Type,Inhibitor,Concentration,Cell,Buffer,Inside
 17/07/2015,151,4,TSPO-/-,control,0nM,BM,Bicarbonate,Candida
 17/07/2015,151,5,TSPO-/-,control,0nM,BM,Duchen,Candida
 17/07/2015,151,6,TSPO-/-,zinc,300uM,BM,Phosphate_free_duchen,Candida
-23/07/2015,152,1,WT,control,0nM,BM,Duchen,Candida
-23/07/2015,152,2,WT,control,0nM,BM,Bicarbonate,Candida
-23/07/2015,152,3,WT,zinc,300uM,BM,Phosphate_free_duchen,Candida
-23/07/2015,152,4,TSPO-/-,control,0nM,BM,Duchen,Candida
-23/07/2015,152,5,TSPO-/-,control,0nM,BM,Bicarbonate,Candida
-23/07/2015,152,6,TSPO-/-,zinc,300uM,BM,Phosphate_free_duchen,Candida
 29/07/2015,153,1,CLCN7-/-,control,0nM,Blood,Bicarbonate,Candida
 29/07/2015,153,2,CLCN7-/-,control,0nM,Blood,Duchen1,Candida
 29/07/2015,153,3,CLCN7-/-,control,0nM,Blood,Duchen2,Candida
@@ -1116,3 +1110,9 @@ Date,Plate,Well,Type,Inhibitor,Concentration,Cell,Buffer,Inside
 07/08/2015,157,6,WT,NPPB,100uM,BM,Duchen,Candida
 07/08/2015,157,7,WT,DCPIB,20uM,BM,Duchen,Candida
 07/08/2015,157,8,WT,FFA,100uM,BM,Duchen,Candida
+10/08/2015,158,1,WT,control,0nM,BM/blood,Phosphate_free_duchen,Candida
+10/08/2015,158,2,WT,zinc,300uM,BM/blood,Phosphate_free_duchen,Candida
+10/08/2015,158,3,CLIC1-/-,control,0nM,BM/blood,Phosphate_free_duchen,Candida
+10/08/2015,158,4,CLIC1-/-,zinc,300uM,BM/blood,Phosphate_free_duchen,Candida
+10/08/2015,158,5,WT,control,0nM,BM,Duchen,Candida
+10/08/2015,158,6,CLIC1-/-,control,0nM,BM,Duchen,Candida
