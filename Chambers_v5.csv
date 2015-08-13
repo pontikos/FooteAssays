@@ -1122,3 +1122,11 @@ Date,Plate,Well,Type,Inhibitor,Concentration,Cell,Buffer,Inside
 11/08/2015,159,4,WT,control,0nM,BM,Bicarbonate,Candida
 11/08/2015,159,5,WT,control,0nM,BM,Duchen,Candida
 11/08/2015,159,6,WT,zinc,300uM,BM,Phosphate_free_duchen,Candida
+13/08/2015,160,1,Human,controlEtOH,0nM,Blood,Phosphate_free_duchen,Candida
+13/08/2015,160,2,Human,zinc,10uM,Blood,Phosphate_free_duchen,Candida
+13/08/2015,160,3,Human,zinc,30uM,Blood,Phosphate_free_duchen,Candida
+13/08/2015,160,4,Human,zinc,100uM,Blood,Phosphate_free_duchen,Candida
+13/08/2015,160,5,Human,DCPIB,20uM,Blood,Phosphate_free_duchen,Candida
+13/08/2015,160,6,Human,DCPIB+zinc,20uM+10uM,Blood,Phosphate_free_duchen,Candida
+13/08/2015,160,7,Human,DCPIB+zinc,20uM+30uM,Blood,Phosphate_free_duchen,Candida
+13/08/2015,160,8,Human,DCPIB+zinc,20uM+100uM,Blood,Phosphate_free_duchen,Candida
