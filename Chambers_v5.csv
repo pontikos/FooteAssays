@@ -1127,6 +1127,6 @@ Date,Plate,Well,Type,Inhibitor,Concentration,Cell,Buffer,Inside
 13/08/2015,160,3,Human,zinc,30uM,Blood,Phosphate_free_duchen,Candida
 13/08/2015,160,4,Human,zinc,100uM,Blood,Phosphate_free_duchen,Candida
 13/08/2015,160,5,Human,DCPIB,20uM,Blood,Phosphate_free_duchen,Candida
-13/08/2015,160,6,Human,DCPIB+zinc,20uM+10uM,Blood,Phosphate_free_duchen,Candida
-13/08/2015,160,7,Human,DCPIB+zinc,20uM+30uM,Blood,Phosphate_free_duchen,Candida
-13/08/2015,160,8,Human,DCPIB+zinc,20uM+100uM,Blood,Phosphate_free_duchen,Candida
+13/08/2015,160,6,Human,DCPIBandZinc,20uMand10uM,Blood,Phosphate_free_duchen,Candida
+13/08/2015,160,7,Human,DCPIBandZinc,20uMand30uM,Blood,Phosphate_free_duchen,Candida
+13/08/2015,160,8,Human,DCPIBandZinc,20uMand100uM,Blood,Phosphate_free_duchen,Candida
