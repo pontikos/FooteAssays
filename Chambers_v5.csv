@@ -1130,3 +1130,11 @@ Date,Plate,Well,Type,Inhibitor,Concentration,Cell,Buffer,Inside
 13/08/2015,160,6,Human,DCPIBandZinc,20uMand10uM,Blood,Phosphate_free_duchen,Candida
 13/08/2015,160,7,Human,DCPIBandZinc,20uMand30uM,Blood,Phosphate_free_duchen,Candida
 13/08/2015,160,8,Human,DCPIBandZinc,20uMand100uM,Blood,Phosphate_free_duchen,Candida
+17/08/2015,161,1,Human,controlDMSO,0nM,Blood,Duchen,Candida
+17/08/2015,161,2,Human,Erastin,10uM,Blood,Duchen,Candida
+17/08/2015,161,3,Human,Erastin,50uM,Blood,Duchen,Candida
+17/08/2015,161,4,Human,TRO 19622,50uM,Blood,Duchen,Candida
+17/08/2015,161,5,Human,TRO 19622,100uM,Blood,Duchen,Candida
+17/08/2015,161,6,Human,Talniflumate,100uM,Blood,Duchen,Candida
+17/08/2015,161,7,Human,Talniflumate,200uM,Blood,Duchen,Candida
+17/08/2015,161,8,Human,LOE 908 hydrochloride,1.25uM,Blood,Duchen,Candida
