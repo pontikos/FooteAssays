@@ -27,7 +27,7 @@ To update changes to FooteAssays
 
 RStudio - Git - Update icon - Shell
 
-A black dialogue box pops up. Type in git pull and enter username: juliet.foote.14@ucl.ac.uk password: Tinkerbell16
+A black dialogue box pops up.
 Then:
 git commit -m `update to code` do.R or `Chambers_v5.csv` Chambers_v5.csv or whatever
 Then:
